@@ -1,4 +1,4 @@
-# Payum mbe4 Extension
+# Payum mbe4 Extension [![Build Status](https://travis-ci.org/sourcefabric/payum-mbe4.svg)](https://travis-ci.org/sourcefabric/payum-mbe4) [![StyleCI](https://styleci.io/repos/103504312/shield?branch=master)](https://styleci.io/repos/103504312)
 
 The Payum extension. It provides [mbe4](http://www.mbe4.de/) payment integration.
 
