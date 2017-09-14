@@ -32,7 +32,7 @@ final class CaptureActionSpec extends ObjectBehavior
     function it_executes_request(Capture $request, GatewayInterface $gateway, TokenInterface $token)
     {
         $request->getModel()->willReturn(new ArrayObject());
-        $token->getAfterUrl()->shouldBeCalled();
+        $token->getTargetUrl()->shouldBeCalled();
         $request->getToken()->willReturn($token);
         $this->setGateway($gateway);
 
