@@ -43,7 +43,7 @@ Supported methods
 
 This extension supports only single payments, no subscriptions.
 
-- Single offsite payment
+- [Single offsite payment](Resources/doc/single_payment.md)
 
 See `mbe4` [documentation](Resources/doc/mbe4_documentation.pdf).
 
