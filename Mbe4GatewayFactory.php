@@ -48,7 +48,7 @@ class Mbe4GatewayFactory extends GatewayFactory
             $config['payum.api'] = function (ArrayObject $config) {
                 $config->validateNotEmpty($config['payum.required_options']);
 
-                return new Api((array) $config, $config['httplug.message_factory']);
+                return new Api((array) $config);
             };
         }
     }
