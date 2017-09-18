@@ -13,9 +13,6 @@ declare(strict_types=1);
 
 namespace Sourcefabric\Payum\Mbe4;
 
-use Http\Message\MessageFactory;
-use Payum\Core\HttpClientInterface;
-
 class Api
 {
     const FIELD_CONTENTCLASS = 'contentclass';
@@ -31,32 +28,18 @@ class Api
     const FIELD_RESPONSE_CODE = 'responsecode';
 
     /**
-     * @var HttpClientInterface
-     */
-    protected $client;
-
-    /**
-     * @var MessageFactory
-     */
-    protected $messageFactory;
-
-    /**
      * @var array
      */
     protected $options = [];
 
     /**
-     * @param array               $options
-     * @param HttpClientInterface $client
-     * @param MessageFactory      $messageFactory
+     * @param array $options
      *
      * @throws \Payum\Core\Exception\InvalidArgumentException if an option is invalid
      */
-    public function __construct(array $options, HttpClientInterface $client, MessageFactory $messageFactory)
+    public function __construct(array $options)
     {
         $this->options = $options;
-        $this->client = $client;
-        $this->messageFactory = $messageFactory;
     }
 
     /**
