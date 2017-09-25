@@ -15,6 +15,7 @@ namespace Sourcefabric\Payum\Mbe4;
 
 class Api
 {
+    const VERSION = '3.1.2';
     const FIELD_CONTENTCLASS = 'contentclass';
     const FIELD_DESCRIPTION = 'description';
     const FIELD_CLIENT_TRANSACTION_ID = 'clienttransactionid';
@@ -51,7 +52,7 @@ class Api
     {
         $fields = $this->preparePayment($fields);
 
-        return $this->getApiEndpoint().'?'.http_build_query($fields);
+        return urldecode($this->getApiEndpoint().'?'.http_build_query($fields));
     }
 
     /**
@@ -71,12 +72,13 @@ class Api
             self::FIELD_ID => null,
             self::FIELD_CLIENT_TRANSACTION_ID => null,
             self::FIELD_AMOUNT => null,
-            self::FIELD_CURRENCY => null,
             self::FIELD_RETURNURL => null,
             self::FIELD_CALLBACKURL => null,
             self::FIELD_TIMESTAMP => null,
             self::FIELD_HASH => null,
         ];
+
+        $fields[self::FIELD_CONTENTCLASS] = $this->options['contentclass'];
 
         $fields = array_filter(array_replace(
             $supportedParams,
@@ -135,5 +137,15 @@ class Api
     protected function getApiEndpoint(): string
     {
         return 'https://billing.mbe4.de/widget/singlepayment';
+    }
+
+    /**
+     * @return array
+     */
+    public static function getSupportedCurrencies(): array
+    {
+        return [
+            'EUR',
+        ];
     }
 }

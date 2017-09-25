@@ -25,6 +25,7 @@ final class ApiSpec extends ObjectBehavior
             'password' => 'password',
             'clientId' => 1234,
             'serviceId' => 4321,
+            'contentclass' => 13,
         ]);
     }
 
@@ -79,11 +80,11 @@ final class ApiSpec extends ObjectBehavior
 
         $hash = $this->generateHash($now);
 
-        $this->getOffsiteUrl($fields)->shouldReturn(sprintf(
+        $this->getOffsiteUrl($fields)->shouldReturn(urldecode(sprintf(
             'https://billing.mbe4.de/widget/singlepayment?username=user&clientid=1234&serviceid=4321&contentclass=13&description=desc&clienttransactionid=12345-334&amount=500&timestamp=%s&callbackurl=url&hash=%s',
-            urlencode($now->format('Y-m-d\Th:i:s.\0\0\0\Z')),
+            $now->format('Y-m-d\Th:i:s.\0\0\0\Z'),
             $hash
-        ));
+        )));
     }
 
     private function generateHash(\DateTimeInterface $now): string

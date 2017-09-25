@@ -14,12 +14,12 @@ declare(strict_types=1);
 namespace Sourcefabric\Payum\Mbe4\Action;
 
 use Payum\Core\Action\ActionInterface;
+use Payum\Core\Exception\InvalidArgumentException;
 use Payum\Core\Exception\RequestNotSupportedException;
 use Payum\Core\GatewayAwareInterface;
 use Payum\Core\GatewayAwareTrait;
 use Payum\Core\Model\PaymentInterface;
 use Payum\Core\Request\Convert;
-use Payum\Core\Request\GetCurrency;
 use Sourcefabric\Payum\Mbe4\Api;
 
 class ConvertPaymentAction implements ActionInterface, GatewayAwareInterface
@@ -37,19 +37,29 @@ class ConvertPaymentAction implements ActionInterface, GatewayAwareInterface
 
         /** @var PaymentInterface $payment */
         $payment = $request->getSource();
-
-        $this->gateway->execute($currency = new GetCurrency($payment->getCurrencyCode()));
-
-        $divisor = 10 ** $currency->exp;
         $details = $payment->getDetails();
 
-        $details[Api::FIELD_CONTENTCLASS] = 13;
+        $currency = $payment->getCurrencyCode();
+        $this->validateCurrency($currency);
+
         $details[Api::FIELD_DESCRIPTION] = $payment->getDescription();
         $details[Api::FIELD_CLIENT_TRANSACTION_ID] = md5(uniqid((string) mt_rand(), true));
-        $details[Api::FIELD_AMOUNT] = (float) $payment->getTotalAmount() / $divisor;
-        $details[Api::FIELD_CURRENCY] = $payment->getCurrencyCode();
+        $details[Api::FIELD_AMOUNT] = (int) $payment->getTotalAmount();
+        $details[Api::FIELD_CURRENCY] = $currency;
 
         $request->setResult($details);
+    }
+
+    /**
+     * @param string $currency
+     *
+     * @throws \Payum\Core\Exception\InvalidArgumentException
+     */
+    private function validateCurrency(string $currency): void
+    {
+        if (!in_array(strtoupper($currency), Api::getSupportedCurrencies(), true)) {
+            throw new InvalidArgumentException(sprintf('Currency %s is not supported!', $currency));
+        }
     }
 
     /**

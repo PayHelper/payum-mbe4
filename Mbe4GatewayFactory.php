@@ -43,6 +43,7 @@ class Mbe4GatewayFactory extends GatewayFactory
                 'password',
                 'clientId',
                 'serviceId',
+                'contentclass',
             ];
 
             $config['payum.api'] = function (ArrayObject $config) {
