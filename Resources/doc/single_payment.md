@@ -13,7 +13,6 @@ use Payum\Core\Request\Capture;
 use Sourcefabric\Payum\Mbe4\Api;
 
 $payment = [];
-$payment[Api::FIELD_CONTENTCLASS] = 13;
 $payment[Api::FIELD_DESCRIPTION] = 'description';
 $payment[Api::FIELD_CLIENT_TRANSACTION_ID] = md5(uniqid((string) mt_rand(), true));
 $payment[Api::FIELD_AMOUNT] = 100;
