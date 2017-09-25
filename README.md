@@ -81,10 +81,11 @@ payum:
     gateways:
         mbe4:
             factory: mbe4
-            username: username, # change this
-            password: password, # change this
-            clientId: 4321, # change this
-            serviceId: 1234, # change this
+            username: username # change this
+            password: password # change this
+            clientId: 4321 # change this
+            serviceId: 1234 # change this
+            contentclass: 1 # change this
 ```
 
 4. Gateway usage
