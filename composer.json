@@ -1,5 +1,5 @@
 {
-    "name": "sourcefabric/payum-mbe4",
+    "name": "payhelper/payum-mbe4",
     "type": "library",
     "description": "The Payum extension. It provides Mbe4 payment integration.",
     "keywords": ["payment", "payum", "mbe4", "phone", "bill"],
