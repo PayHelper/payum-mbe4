@@ -11,16 +11,16 @@
 
 declare(strict_types=1);
 
-namespace spec\Sourcefabric\Payum\Mbe4\Action;
+namespace spec\PayHelper\Payum\Mbe4\Action;
 
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\GatewayInterface;
 use Payum\Core\Request\Capture;
 use Payum\Core\Security\TokenInterface;
 use Prophecy\Argument;
-use Sourcefabric\Payum\Mbe4\Action\CaptureAction;
+use PayHelper\Payum\Mbe4\Action\CaptureAction;
 use PhpSpec\ObjectBehavior;
-use Sourcefabric\Payum\Mbe4\Request\Api\DoOffsiteCapture;
+use PayHelper\Payum\Mbe4\Request\Api\DoOffsiteCapture;
 
 final class CaptureActionSpec extends ObjectBehavior
 {

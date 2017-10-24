@@ -11,12 +11,12 @@
 
 declare(strict_types=1);
 
-namespace spec\Sourcefabric\Payum\Mbe4\Action;
+namespace spec\PayHelper\Payum\Mbe4\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Request\GetStatusInterface;
-use Sourcefabric\Payum\Mbe4\Action\StatusAction;
+use PayHelper\Payum\Mbe4\Action\StatusAction;
 use PhpSpec\ObjectBehavior;
 
 final class StatusActionSpec extends ObjectBehavior

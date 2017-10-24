@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: Sourcefabric\Payum\Mbe4
-        psr4_prefix: Sourcefabric\Payum\Mbe4
+        namespace: PayHelper\Payum\Mbe4
+        psr4_prefix: PayHelper\Payum\Mbe4
         src_path: .

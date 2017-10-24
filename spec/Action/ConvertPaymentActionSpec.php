@@ -11,13 +11,13 @@
 
 declare(strict_types=1);
 
-namespace spec\Sourcefabric\Payum\Mbe4\Action;
+namespace spec\PayHelper\Payum\Mbe4\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\GatewayAwareInterface;
 use Payum\Core\Model\PaymentInterface;
 use Payum\Core\Request\Convert;
-use Sourcefabric\Payum\Mbe4\Action\ConvertPaymentAction;
+use PayHelper\Payum\Mbe4\Action\ConvertPaymentAction;
 use PhpSpec\ObjectBehavior;
 
 final class ConvertPaymentActionSpec extends ObjectBehavior

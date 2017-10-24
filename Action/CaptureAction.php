@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Sourcefabric\Payum\Mbe4\Action;
+namespace PayHelper\Payum\Mbe4\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Bridge\Spl\ArrayObject;
@@ -19,8 +19,8 @@ use Payum\Core\GatewayAwareInterface;
 use Payum\Core\GatewayAwareTrait;
 use Payum\Core\Request\Capture;
 use Payum\Core\Exception\RequestNotSupportedException;
-use Sourcefabric\Payum\Mbe4\Api;
-use Sourcefabric\Payum\Mbe4\Request\Api\DoOffsiteCapture;
+use PayHelper\Payum\Mbe4\Api;
+use PayHelper\Payum\Mbe4\Request\Api\DoOffsiteCapture;
 
 class CaptureAction implements ActionInterface, GatewayAwareInterface
 {

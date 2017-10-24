@@ -10,7 +10,7 @@ In other words, payment is authorized and captured immediately.
 
 ```php
 use Payum\Core\Request\Capture;
-use Sourcefabric\Payum\Mbe4\Api;
+use PayHelper\Payum\Mbe4\Api;
 
 $payment = [];
 $payment[Api::FIELD_DESCRIPTION] = 'description';

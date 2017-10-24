@@ -11,10 +11,10 @@
 
 declare(strict_types=1);
 
-namespace spec\Sourcefabric\Payum\Mbe4\Request\Api;
+namespace spec\PayHelper\Payum\Mbe4\Request\Api;
 
 use Payum\Core\Request\Generic;
-use Sourcefabric\Payum\Mbe4\Request\Api\DoOffsiteCapture;
+use PayHelper\Payum\Mbe4\Request\Api\DoOffsiteCapture;
 use PhpSpec\ObjectBehavior;
 
 final class DoOffsiteCaptureSpec extends ObjectBehavior

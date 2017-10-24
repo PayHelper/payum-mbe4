@@ -11,13 +11,13 @@
 
 declare(strict_types=1);
 
-namespace Sourcefabric\Payum\Mbe4\Action;
+namespace PayHelper\Payum\Mbe4\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Request\GetStatusInterface;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\Exception\RequestNotSupportedException;
-use Sourcefabric\Payum\Mbe4\Api;
+use PayHelper\Payum\Mbe4\Api;
 
 class StatusAction implements ActionInterface
 {

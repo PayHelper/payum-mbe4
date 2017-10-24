@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Sourcefabric\Payum\Mbe4;
+namespace PayHelper\Payum\Mbe4;
 
 class Api
 {

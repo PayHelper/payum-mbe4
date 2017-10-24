@@ -11,9 +11,9 @@
 
 declare(strict_types=1);
 
-namespace spec\Sourcefabric\Payum\Mbe4;
+namespace spec\PayHelper\Payum\Mbe4;
 
-use Sourcefabric\Payum\Mbe4\Api;
+use PayHelper\Payum\Mbe4\Api;
 use PhpSpec\ObjectBehavior;
 
 final class ApiSpec extends ObjectBehavior

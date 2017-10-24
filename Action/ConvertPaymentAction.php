@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Sourcefabric\Payum\Mbe4\Action;
+namespace PayHelper\Payum\Mbe4\Action;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\Exception\InvalidArgumentException;
@@ -20,7 +20,7 @@ use Payum\Core\GatewayAwareInterface;
 use Payum\Core\GatewayAwareTrait;
 use Payum\Core\Model\PaymentInterface;
 use Payum\Core\Request\Convert;
-use Sourcefabric\Payum\Mbe4\Api;
+use PayHelper\Payum\Mbe4\Api;
 
 class ConvertPaymentAction implements ActionInterface, GatewayAwareInterface
 {

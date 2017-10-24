@@ -11,12 +11,12 @@
 
 declare(strict_types=1);
 
-namespace Sourcefabric\Payum\Mbe4;
+namespace PayHelper\Payum\Mbe4;
 
-use Sourcefabric\Payum\Mbe4\Action\Api\DoOffsiteCaptureAction;
-use Sourcefabric\Payum\Mbe4\Action\ConvertPaymentAction;
-use Sourcefabric\Payum\Mbe4\Action\CaptureAction;
-use Sourcefabric\Payum\Mbe4\Action\StatusAction;
+use PayHelper\Payum\Mbe4\Action\Api\DoOffsiteCaptureAction;
+use PayHelper\Payum\Mbe4\Action\ConvertPaymentAction;
+use PayHelper\Payum\Mbe4\Action\CaptureAction;
+use PayHelper\Payum\Mbe4\Action\StatusAction;
 use Payum\Core\Bridge\Spl\ArrayObject;
 use Payum\Core\GatewayFactory;
 

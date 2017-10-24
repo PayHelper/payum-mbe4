@@ -11,14 +11,14 @@
 
 declare(strict_types=1);
 
-namespace Sourcefabric\Payum\Mbe4\Action\Api;
+namespace PayHelper\Payum\Mbe4\Action\Api;
 
 use Payum\Core\Action\ActionInterface;
 use Payum\Core\ApiAwareInterface;
 use Payum\Core\ApiAwareTrait;
 use Payum\Core\GatewayAwareInterface;
 use Payum\Core\GatewayAwareTrait;
-use Sourcefabric\Payum\Mbe4\Api;
+use PayHelper\Payum\Mbe4\Api;
 
 abstract class BaseApiAwareAction implements ActionInterface, GatewayAwareInterface, ApiAwareInterface
 {

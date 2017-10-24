@@ -1,4 +1,4 @@
-# Payum mbe4 Extension [![Build Status](https://travis-ci.org/sourcefabric/payum-mbe4.svg)](https://travis-ci.org/sourcefabric/payum-mbe4) [![StyleCI](https://styleci.io/repos/103504312/shield?branch=master)](https://styleci.io/repos/103504312)
+# Payum mbe4 Extension [![Build Status](https://travis-ci.org/PayHelper/payum-mbe4.svg)](https://travis-ci.org/PayHelper/payum-mbe4) [![StyleCI](https://styleci.io/repos/103504312/shield?branch=master)](https://styleci.io/repos/103504312)
 
 The Payum extension. It provides [mbe4](http://www.mbe4.de/) payment integration.
 
@@ -16,14 +16,14 @@ Installing the extension
 Install this extension as a Composer dependency by requiring it in a `composer.json` file:
 
 ```bash
-composer require sourcefabric/payum-mbe4
+composer require payhelper/payum-mbe4
 ```
 
 Register the `mbe4` Payum factory using `PayumBuilder`:
 
 ```php
 use Payum\Core\GatewayFactoryInterface;
-use Sourcefabric\Payum\Mbe4\Mbe4GatewayFactory;
+use PayHelper\Payum\Mbe4\Mbe4GatewayFactory;
 
 $payumBuilder->addGatewayFactory('mbe4', function(array $config, GatewayFactoryInterface $gatewayFactory) {
     return new Mbe4GatewayFactory($config, $gatewayFactory);
@@ -67,7 +67,7 @@ composer require payum/payum-bundle ^2.0
 services:
     app.payum.mbe4.factory:
         class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
-        arguments: [Sourcefabric\Payum\Mbe4\Mbe4GatewayFactory]
+        arguments: [PayHelper\Payum\Mbe4\Mbe4GatewayFactory]
         tags:
             - { name: payum.gateway_factory_builder, factory: mbe4 }
 ```
